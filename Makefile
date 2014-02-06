@@ -20,13 +20,13 @@ test-watch:
 		--growl -w\
 		$(TESTS)
 
-coverage:
+coverage: .FORCE
 	@echo visit file://$$PWD/coverage.html
 	@COVERAGE=1 $(MOCHA) \
 		--reporter html-cov \
 		$(TESTS) > coverage.html || true
 
-lib-cov:
+lib-cov: .FORCE
 	@echo "JSCOVERAGE $@"
 	@$(JSCOVERAGE) lib $@
 	@echo "SED        index-cov.js"

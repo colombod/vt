@@ -24,4 +24,18 @@ describe('TermWriter SGI', function() {
 		expect(line.str).to.be('b');
 		expect(line.attr[0].bold).to.be(true);
 	});
+	it("sets foreground color", function() {
+		var t = newTermWriter();
+		t.write("\x1b[38;5;123mb");
+		var line = t.buffer.getLine(0);
+		expect(line.str).to.be('b');
+		expect(line.attr[0].fg).to.be(123);
+	});
+	it("sets background color", function() {
+		var t = newTermWriter();
+		t.write("\x1b[48;5;124mb");
+		var line = t.buffer.getLine(0);
+		expect(line.str).to.be('b');
+		expect(line.attr[0].bg).to.be(124);
+	});
 });
