@@ -1,2 +1,2 @@
-Terminal = require(process.env.COVERAGE ? '../index-cov.js' : '../index.js');
+Terminal = process.env.COVERAGE ? require('' + '../index-cov.js') : require('../index.js');
 expect = require("expect.js");

@@ -1,3 +1,5 @@
+require('./common');
+
 describe('TermDiff', function() {
 	var TermBuffer = Terminal.TermBuffer;
 	var TermDiff = Terminal.TermDiff;

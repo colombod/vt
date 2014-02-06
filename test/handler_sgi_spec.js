@@ -1,3 +1,5 @@
+require('./common');
+
 var TermBuffer = Terminal.TermBuffer;
 var TermWriter = Terminal.TermWriter;
 function newTermWriter(w, h) {

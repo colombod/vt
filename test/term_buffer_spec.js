@@ -1,3 +1,5 @@
+require('./common');
+
 describe('TermBuffer', function() {
 	var TermBuffer = Terminal.TermBuffer;
 
